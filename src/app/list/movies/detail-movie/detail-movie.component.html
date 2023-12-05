@@ -1,0 +1,15 @@
+<section class="container">
+  <article class="detail">
+    <app-card-movie [movie]="movie"></app-card-movie>
+  </article>
+  <article class="video" *ngIf="movie">
+    <button class="btn-home" (click)="route.navigateByUrl('movies')">home</button>
+    <div class="youtube">
+      <youtube-player videoId={{getIdVideo(movie.Trailer_Link)}}
+        loadApi="false"
+        suggestedQuality="highres"
+        >
+    </youtube-player>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,57 @@
+.poster {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+}
+
+.card {
+  align-items: center;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: rgb(59, 59, 59);
+}
+
+.card-action {
+  margin: 16px 0;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.genre {
+  background: dodgerblue;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.btn-detail {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ddd;
+  color: black;
+}
+
+.btn-add-favorite:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+
+.btn-detail:hover {
+  background-color: rgb(155, 155, 155);;
+}
+
+.btn-favorite {
+  background-color: orange;
+}
+
+.btn-favorite:hover {
+  background-color: rgba(255, 166, 0, 0.657);
+}

@@ -1,0 +1,22 @@
+<section class="card">
+  <article>
+    <h2>{{movie.Title}}</h2>
+    <picture class="card-img">
+      <img src={{movie.image}} alt="" class="poster">
+    </picture>
+    <p>{{movie.Description}}</p>
+    <p>{{movie.Rating}}</p>
+    <p>{{movie.Duration}}</p>
+    <span class="genre" *ngFor="let genre of movie.Genre">{{genre}}</span>
+  </article>
+  <article class="card-action">
+    <button (click)="detailMovie(movie.id)" class="btn-detail">
+      Detail movie
+    </button>
+    <button (click)="AddFavorites(movie.id)" class="btn-detail"
+      [ngClass]="{'btn-favorite': isFavorite(movie.id)}">
+      Favorite
+    </button>
+  </article>
+
+</section>
