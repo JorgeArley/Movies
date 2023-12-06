@@ -24,4 +24,14 @@ export class HomeComponent {
       this.movies = resp;
     })
   }
+
+  orderBy( data:string ) {
+    this.movies.sort(function(a:any, b:any) {
+      if (data === 'Tittle') {
+        return a.Title.localeCompare(b.Title);
+      } else {
+        return new Date(a.Released_date).getTime() - new Date(b.Released_date).getTime();
+      }
+    });
+  }
 }

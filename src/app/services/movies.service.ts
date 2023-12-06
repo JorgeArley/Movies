@@ -20,16 +20,18 @@ export class MoviesService {
 
   getStorage() {
    let list = localStorage.getItem('listMovies') || '';
-   this.favorites = list?.split(',').map( id => {
-    return parseInt(id)
-   })
+   if (list) {
+     this.favorites = list?.split(',').map( id => {
+       return parseInt(id)
+      })
+    }
   }
 
   getMovies(): Observable<Movie> {
     return this.http.get<Movie>(`${ this.baseUrl }`);
   }
 
-  addFavorires(idMovie: number) {
+  addFavorires(idMovie: number):void {
     let eleToDel = this.favorites.indexOf(idMovie);
     if (eleToDel !== -1) {
       this.favorites.splice(eleToDel, 1);

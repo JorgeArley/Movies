@@ -34,7 +34,7 @@ export class CardMovieComponent {
 
   isFavorite(id: number): boolean {
     this.getStorage();
-    let list = this.listMovies?.split(',');
+    let list = this.listMovies?.split(',') || [''];
     let eleToDel = list?.indexOf(id.toString());
     return eleToDel !== -1 ? true : false
   }

@@ -1,9 +1,17 @@
 <section class="header">
   <h1>Movies List</h1>
+  <label for="Order-select">Choose a Order by: </label>
+  <select #order
+    name="dates"
+    id="Order-select"
+    class="order-select"
+    (change)="orderBy(order.value)">
+    <option></option>
+    <option value="Tittle">Tittle</option>
+    <option value="Released_date">Released date</option>
+  </select>
 </section>
 <section class="container">
-  <app-card-movie
-    *ngFor="let movie of movies"
-    [movie]="movie">
+  <app-card-movie *ngFor="let movie of movies" [movie]="movie">
   </app-card-movie>
 </section>
